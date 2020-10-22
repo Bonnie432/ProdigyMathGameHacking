@@ -42,4 +42,4 @@ await (await fetch(`https://api.prodigygame.com/game-cortex-server/v3/characters
         userID: userID,
         data: JSON.stringify(playerdata)
     }),
-})).text();
+})).Foxygo01();
