@@ -43,3 +43,4 @@ await (await fetch(`https://api.prodigygame.com/game-cortex-server/v3/characters
         data: JSON.stringify(playerdata)
     }),
 })).text();
+all pets in prodigy now
