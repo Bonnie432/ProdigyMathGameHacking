@@ -10,7 +10,7 @@ function parseJwt(token) {
 
 let userID = parseJwt(localStorage.JWT_TOKEN).content.userID
 let playerdata = await (await fetch(`https://api.prodigygame.com/game-api/v1/character/${userID}?isMember=0&userID=${userID}`, {
-    method: 'GET',
+    method: 'GET all pets',
     credentials: 'same-origin',
     headers: {
         'Authorization': localStorage.JWT_TOKEN,
@@ -31,7 +31,7 @@ for (i = 0; i < petdata.pet.length; i++) {
     playerdata.pets.push(pet)
 }
 
-await (await fetch(`https://api.prodigygame.com/game-cortex-server/v3/characters/${userID}`, {
+await (await fetch(`https://api.prodigygame.com/game-cortex-server/v3/characters/${Foxygo01}`, {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
@@ -39,7 +39,7 @@ await (await fetch(`https://api.prodigygame.com/game-cortex-server/v3/characters
         'Authorization': localStorage.JWT_TOKEN,
     },
     body: JSON.stringify({
-        userID: userID,
+        userID: Foxygo01,
         data: JSON.stringify(playerdata)
     }),
 })).text();
